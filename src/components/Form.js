@@ -14,9 +14,10 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
         setInputText("");
     };
     return (
-        <form>
-            <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
-            <button onClick={submitTodoHandler} className="todo-button" type="submit">
+        <form onSubmit={submitTodoHandler}>
+            <input id="myText" value={inputText} onChange={inputTextHandler}
+                type="text" className="todo-input" required />
+            <button className="todo-button" type="submit">
                 <i className="fas fa-plus-square"></i>
             </button>
         </form>
